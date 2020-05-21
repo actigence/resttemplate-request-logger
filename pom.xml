@@ -107,6 +107,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <log4j.version>2.13.2</log4j.version>
         <gson.version>2.8.6</gson.version>
+        <spring.version>5.2.6.RELEASE</spring.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -122,11 +124,27 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
 
