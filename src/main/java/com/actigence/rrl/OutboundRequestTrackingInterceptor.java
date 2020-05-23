@@ -49,7 +49,6 @@ import static java.util.stream.Collectors.toList;
  * RestTemplate interceptor class to publish events to AWS hosted backend
  */
 @Slf4j
-@Component
 public class OutboundRequestTrackingInterceptor implements ClientHttpRequestInterceptor {
 
     private final SQSClient sqsClient = new SQSClient();
@@ -93,8 +92,8 @@ public class OutboundRequestTrackingInterceptor implements ClientHttpRequestInte
                                                            ZonedDateTime startTime) {
         try {
             return ofNullable(OutboundRequestLog.builder()
-                    .startTime(startTime)
-                    .endTime(ZonedDateTime.now())
+                    .startTime(startTime.toString())
+                    .endTime(ZonedDateTime.now().toString())
                     .requestUri(request.getURI().toString())
                     .requestMethod(request.getMethodValue())
                     .requestHeaders(requestHeaders(request))
@@ -120,7 +119,7 @@ public class OutboundRequestTrackingInterceptor implements ClientHttpRequestInte
         HttpHeaders requestHeaders = request.getHeaders();
         return requestHeaders.keySet()
                 .stream()
-                .map(it -> new NameValue(it, requestHeaders.getOrEmpty(it)))
+                .map(it -> new NameValue(it, requestHeaders.get(it)))
                 .collect(toList());
     }
 
@@ -134,7 +133,7 @@ public class OutboundRequestTrackingInterceptor implements ClientHttpRequestInte
         HttpHeaders requestHeaders = response.getHeaders();
         return requestHeaders.keySet()
                 .stream()
-                .map(it -> new NameValue(it, requestHeaders.getOrEmpty(it)))
+                .map(it -> new NameValue(it, requestHeaders.get(it)))
                 .collect(toList());
     }
 }

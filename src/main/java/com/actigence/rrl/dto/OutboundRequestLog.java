@@ -46,8 +46,8 @@ public class OutboundRequestLog {
     private String responseStatusText;
     private List<NameValue> responseHeaders;
     private String responseBody;
-    private ZonedDateTime startTime;
-    private ZonedDateTime endTime;
+    private String startTime;
+    private String endTime;
 
     public void setClientId(String clientId) {
         this.clientId = clientId;
