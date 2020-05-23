@@ -1,4 +1,6 @@
 # RestTemplate Request Logger
+![Java CI with Maven](https://github.com/actigence/resttemplate-request-logger/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 This package can be used to log request and response details of API calls made using Spring RestTemplates. 
 The logs are stored in AWS DynamoDB using [API Access Tracker (Backend)](https://github.com/actigence/api-access-tracker-backend).
 Please visit [API Access Tracker (Backend)](https://github.com/actigence/api-access-tracker-backend) to setup

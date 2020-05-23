@@ -6,7 +6,7 @@
 
     <groupId>com.actigence</groupId>
     <artifactId>resttemplate-request-logger</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <build>
@@ -77,12 +77,12 @@
     <description>Log all the outgoing API calls made through Spring's RestTemplate to API Access Tracker backend
         (https://github.com/Actigence/api-access-tracker-backend)
     </description>
-    <url>https://github.com/Actigence/resttemplate-request-logger</url>
+    <url>https://github.com/actigence/resttemplate-request-logger</url>
 
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/Actigence/resttemplate-request-logger/blob/master/LICENSE</url>
+            <url>https://github.com/actigence/resttemplate-request-logger/blob/master/LICENSE</url>
         </license>
     </licenses>
 
@@ -96,9 +96,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/Actigence/resttemplate-request-logger.git</connection>
-        <developerConnection>scm:git:ssh://github.com:Actigence/resttemplate-request-logger.git</developerConnection>
-        <url>https://github.com/Actigence/resttemplate-request-logger</url>
+        <connection>scm:git:git://github.com/actigence/resttemplate-request-logger.git</connection>
+        <developerConnection>scm:git:ssh://github.com:actigence/resttemplate-request-logger.git</developerConnection>
+        <url>https://github.com/actigence/resttemplate-request-logger</url>
     </scm>
 
     <properties>
@@ -184,12 +184,6 @@
             <artifactId>aws-java-sdk-sqs</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <distributionManagement>
